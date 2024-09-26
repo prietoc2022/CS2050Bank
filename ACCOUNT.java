@@ -1,10 +1,10 @@
 import java.lang.*;
-public abstract class Account {
+public abstract class ACCOUNT {
      String accountName;
      int accountNumber;
      double accountBalance;
 
-    public Account(String username, int accountNumber, double accountBalance) {
+    public ACCOUNT(String username, int accountNumber, double accountBalance) {
         this.accountName = username;
         this.accountNumber= accountNumber;
         this.accountBalance = accountBalance;
