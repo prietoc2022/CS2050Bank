@@ -1,46 +1,43 @@
-public class Account extends User {
-    //purpose of this class is to determine the type of account being used
-   private int accountNumber;
-   private double balance;
-   
+import java.lang.*;
+public abstract class Account {
+     String accountName;
+     int accountNumber;
+     double accountBalance;
 
-   public int getAccountNumber(){
+    public Account(String username, int accountNumber, double accountBalance) {
+        this.accountName = username;
+        this.accountNumber= accountNumber;
+        this.accountBalance = accountBalance;
+    }
 
-       return accountNumber;
+
+   public void getAccountName() {
+        System.out.println("Name: " + accountName);
+
    }
-   public int setAccountNumber(int accountNumber){
+   public void setAccountName(String accountName) {
+       this.accountName = accountName;
 
-       return this.accountNumber = accountNumber;
+   }
+   public void getAccountNumber(int accountNumber) {
+        System.out.println("Account Number"+accountNumber);
+       this.accountNumber = accountNumber;
+
+   }
+   public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+
+   }
+   public void getAccountBalance() {
+        System.out.println("Account Balance: " + accountBalance);
+
+   }
+   public void setAccountBalance(double accountBalance) {
+        this.accountBalance = accountBalance;
+
    }
 
-    public double getBalance() {
-
-       return balance;
+    public int getAccountNumber() {
+        return accountNumber;
     }
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-
-    public static boolean verification(String input){ //checks if the input has both int amd char in them
-        boolean letter = false;
-        boolean number = false;
-        for(char c : input.toCharArray()){
-            if(Character.isLetter(c)){
-                letter = true;
-            }
-            else if(Character.isDigit(c)){
-                number = true;
-            }
-            if(letter && number){
-                return true;
-            }
-        }
-        return false;
-    }
-    // Account data does here
-
-    }
-
-
-
-
+}
